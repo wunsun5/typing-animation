@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Effect</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+            font-size: 2.5em;
+            background-color: black;
+            font-family: 'Trebuchet MS';
+        }
+
+        .typing{
+            position: relative;
+            text-wrap: nowrap;
+            letter-spacing: 24px;
+            overflow: hidden;
+        }
+
+        .typing::before{
+            content: '|';
+            position: absolute;
+            right: -45px;
+            width: 110%;
+            background-color: black;
+            animation: typing 4s steps(20) forwards infinite, cursor 1s infinite;
+        }
+
+        @keyframes typing {
+            to{
+                width: 0%;
+            }
+        }
+
+        @keyframes cursor {
+            50%{
+                color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="typing">Hello Everyone!</div>
+</body>
+</html>
